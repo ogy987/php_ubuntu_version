@@ -1,0 +1,10 @@
+# dbp_hosts_php_7_3 file
+
+[ubuntu]
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+[ubuntu:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=/Users/ogy/Documents/posao/ssh_key_pair/Judd.pem

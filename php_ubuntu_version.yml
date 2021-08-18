@@ -1,0 +1,22 @@
+
+---
+- hosts: ubuntu
+  gather_facts: yes
+  
+  tasks:
+  - name: PHP version on EC2 instances
+    shell: php -v
+    register: php_version_check
+
+  - name: Show the currently instaled PHP version
+    debug:
+      var: php_version_check.stdout_lines
+
+  - name: Ubuntu version on EC2 instance
+    shell: lsb_release -a
+    register: ubuntu_version_check
+
+  - name: Show the currently instaled Ubuntu version
+    debug:
+      var: ubuntu_version_check.stdout_lines
+
